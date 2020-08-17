@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Input from './Input';
 
 const Form = () => {
   const { register, handleSubmit, watch, errors } = useForm();
@@ -7,7 +8,7 @@ const Form = () => {
 
   return (
     <form className='form' onSubmit={handleSubmit(handleFormValidation)}>
-      form
+      <Input name='firstName' type='text' label='First name' />
     </form>
   );
 };

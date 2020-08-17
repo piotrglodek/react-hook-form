@@ -9,6 +9,9 @@ const Form = () => {
   return (
     <form className='form' onSubmit={handleSubmit(handleFormValidation)}>
       <Input name='firstName' type='text' label='First name' />
+      <div className='form__control'>
+        <input type='submit' className='form__submit' value='Validate form' />
+      </div>
     </form>
   );
 };

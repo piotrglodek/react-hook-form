@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = (props) => {
-  const { name, type, label, register } = props;
+  const { name, type, label, register, error } = props;
   return (
     <div className='form__control'>
       <input
@@ -15,6 +15,7 @@ const Input = (props) => {
       <label htmlFor={name} className='form__label'>
         {label}
       </label>
+      {error && <span className='form__error'>{error && error.message}</span>}
     </div>
   );
 };
@@ -26,4 +27,5 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,
+  error: PropTypes.objectOf(PropTypes.string),
 };

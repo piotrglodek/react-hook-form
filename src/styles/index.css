@@ -23,6 +23,8 @@ body {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__input {
@@ -82,4 +84,18 @@ body {
 
 .form__submit:hover {
   background-color: #e45f84;
+}
+
+.form__error {
+  color: #f11212;
+  font-weight: 300;
+  font-size: 14px;
+  padding-top: 4px;
+  letter-spacing: initial;
+}
+
+.form__error::before {
+  display: inline;
+  content: '⚠ ';
+  color: #f11212;
 }
